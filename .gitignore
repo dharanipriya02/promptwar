@@ -1,0 +1,17 @@
+# env
+.env
+.env.local
+.env.production
+
+# deps
+node_modules/
+
+# build
+dist/
+
+# firebase
+.firebase/
+
+# misc
+.DS_Store
+*.log
