@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { UserProvider } from './context/UserContext';
-import { TripProvider } from './context/TripContext';
-import { FavoritesProvider } from './context/FavoritesContext';
-import { SocialProvider } from './context/SocialContext';
-import Layout from './components/Layout/Layout';
+import { AppProviders } from './context/AppProviders';
+import { Layout } from './components';
 
 // Pages
 import ExplorePage from './pages/Explore/ExplorePage';
@@ -61,17 +58,11 @@ function App() {
   };
 
   return (
-    <UserProvider>
-      <TripProvider>
-        <FavoritesProvider>
-          <SocialProvider>
-            <Layout currentRoute={route}>
-              {renderPage()}
-            </Layout>
-          </SocialProvider>
-        </FavoritesProvider>
-      </TripProvider>
-    </UserProvider>
+    <AppProviders>
+      <Layout currentRoute={route}>
+        {renderPage()}
+      </Layout>
+    </AppProviders>
   );
 }
 

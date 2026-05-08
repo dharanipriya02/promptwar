@@ -12,8 +12,8 @@ export const TRIP_TYPES = [
 
 export const CONTINENTS = ['All','Asia','Europe','Americas','Africa','Oceania'];
 
-const m = (month,rating,temp,crowd,note)=>({month,rating,temp,crowd,note});
-const best='best', shoulder='shoulder', avoid='avoid';
+import { createMonthData as m, VISITING_STATUS } from '../utils/dateHelpers';
+const { BEST: best, SHOULDER: shoulder, AVOID: avoid } = VISITING_STATUS;
 
 export const destinations = [
   {
